@@ -23,6 +23,7 @@ func (s *ComponentSuite) TestBasic() {
 	var randomString = strings.ToLower(random.UniqueId())
 	inputs := map[string]interface{}{
 		"organization_name": randomString,
+		"region":            awsRegion,
 	}
 
 	defer s.DestroyAtmosComponent(s.T(), component, stack, &inputs)
