@@ -3,8 +3,10 @@ package test
 import (
 	"testing"
 
+	"github.com/cloudposse/test-helpers/pkg/atmos"
 	helper "github.com/cloudposse/test-helpers/pkg/atmos/component-helper"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 type ComponentSuite struct {
@@ -14,15 +16,20 @@ type ComponentSuite struct {
 func (s *ComponentSuite) TestBasic() {
 	const component = "example/basic"
 	const stack = "default-test"
-	const awsRegion = "us-east-2"
 
 	defer s.DestroyAtmosComponent(s.T(), component, stack, nil)
-	options, _ := s.DeployAtmosComponent(s.T(), component, stack, nil)
-	assert.NotNil(s.T(), options)
+	componentInstance, _ := s.DeployAtmosComponent(s.T(), component, stack, nil)
+	require.NotNil(s.T(), componentInstance)
+
+	assert.NotEmpty(s.T(), atmos.Output(s.T(), componentInstance, "id"))
+	assert.NotEmpty(s.T(), atmos.Output(s.T(), componentInstance, "description"))
+	assert.NotEmpty(s.T(), atmos.Output(s.T(), componentInstance, "public_id"))
+	assert.NotEmpty(s.T(), atmos.Output(s.T(), componentInstance, "user"))
+	assert.NotEmpty(s.T(), atmos.Output(s.T(), componentInstance, "settings"))
+	assert.NotEmpty(s.T(), atmos.Output(s.T(), componentInstance, "api_key"))
 
 	s.DriftTest(component, stack, nil)
 }
-
 
 func (s *ComponentSuite) TestEnabledFlag() {
 	const component = "example/disabled"
