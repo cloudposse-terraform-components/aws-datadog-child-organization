@@ -1,28 +1,27 @@
-name: "template"
+name: "aws-datadog-child-organization"
 
 # Canonical GitHub repo
-github_repo: "cloudposse-terraform-components/template"
+github_repo: "cloudposse-terraform-components/aws-datadog-child-organization"
 
 # Short description of this project
 description: |-
-  Description of this component 55
+  Terraform component to provision a Datadog child organization using the Datadog provider.
+  Datadog API/App keys and API URL are sourced via the `aws-datadog-credentials` component module; you only need to provide the child organization name and AWS region.
 
 usage: |-
   **Stack Level**: Regional or Global
 
-  Here's an example snippet for how to use this component.
+  Example Atmos component configuration:
 
   ```yaml
   components:
     terraform:
-      foo:
+      aws-datadog-child-organization:
         vars:
           enabled: true
+          region: us-east-1
+          organization_name: your-child-organization-name
   ```
-
-
-
-
 
 include:
   - "docs/terraform.md"
@@ -37,11 +36,14 @@ tags:
   - geodesic
   - reference-implementation
   - reference-architecture
+  - datadog
+  - monitoring
 
 # Categories of this project
 categories:
   - terraform-modules/root
   - terraform-components
+  - monitoring
 
 # License of this project
 license: "APACHE2"
@@ -49,8 +51,8 @@ license: "APACHE2"
 # Badges to display
 badges:
   - name: "Latest Release"
-    image: "https://img.shields.io/github/release/cloudposse-terraform-components/template.svg?style=for-the-badge"
-    url: "https://github.com/cloudposse-terraform-components/template/releases/latest"
+    image: "https://img.shields.io/github/release/cloudposse-terraform-components/aws-datadog-child-organization.svg?style=for-the-badge"
+    url: "https://github.com/cloudposse-terraform-components/aws-datadog-child-organization/releases/latest"
   - name: "Slack Community"
     image: "https://slack.cloudposse.com/for-the-badge.svg"
     url: "https://slack.cloudposse.com"
@@ -62,6 +64,9 @@ references:
   - name: "Reference Architectures"
     description: "Launch effortlessly with our turnkey reference architectures, built either by your team or ours."
     url: "https://cloudposse.com/"
+  - name: "Datadog Documentation"
+    description: "Complete documentation for Datadog"
+    url: "https://docs.datadoghq.com/"
 
 related:
 - name: "Cloud Posse Terraform Modules"
@@ -72,7 +77,3 @@ related:
   url: "https://atmos.tools"
 
 contributors: [] # If included generates contribs
-
-
-
-
