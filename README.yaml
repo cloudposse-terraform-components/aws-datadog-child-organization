@@ -22,10 +22,7 @@ usage: |-
           region: us-east-1
           organization_name: your-child-organization-name
   ```
-
-include:
-  - "docs/terraform.md"
-
+  
 tags:
   - terraform
   - terraform-modules
