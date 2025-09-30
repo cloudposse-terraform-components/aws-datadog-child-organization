@@ -17,6 +17,22 @@ tags:
 
 Terraform component to provision a Datadog child organization using the Datadog provider.
 Datadog API/App keys and API URL are sourced via the `aws-datadog-credentials` component module; you only need to provide the child organization name and AWS region.
+
+## Sponsorship
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cloudposse.com/images/partners/datadog-white.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cloudposse.com/images/partners/datadog-purple.svg">
+  <img alt="Datadog" src="https://cloudposse.com/images/partners/datadog-purple.svg" align="right" width="40%">
+</picture>
+
+
+This project is supported by the [Datadog Open Source Program](https://www.datadoghq.com/partner/open-source/).
+
+As part of this collaboration, Datadog provides a dedicated sandbox account that we use for automated integration and acceptance testing. This contribution allows us to continuously validate changes against a real Datadog environment, improving reliability and reducing the risk of regressions.
+
+We are grateful to Datadog for supporting our open source ecosystem and helping ensure that infrastructure code for Terraform remains stable and well-tested
+___
 ## Usage
 
 **Stack Level**: Regional or Global
