@@ -111,8 +111,8 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_datadog_child_organization"></a> [datadog\_child\_organization](#module\_datadog\_child\_organization) | cloudposse/platform/datadog//modules/child_organization | 1.5.0 |
-| <a name="module_datadog_configuration"></a> [datadog\_configuration](#module\_datadog\_configuration) | github.com/cloudposse-terraform-components/aws-datadog-credentials//src/modules/datadog_keys | v1.535.8 |
+| <a name="module_datadog_child_organization"></a> [datadog\_child\_organization](#module\_datadog\_child\_organization) | cloudposse/platform/datadog//modules/child_organization | 1.5.1 |
+| <a name="module_datadog_configuration"></a> [datadog\_configuration](#module\_datadog\_configuration) | github.com/cloudposse-terraform-components/aws-datadog-credentials//src/modules/datadog_keys | v1.535.9 |
 | <a name="module_iam_roles"></a> [iam\_roles](#module\_iam\_roles) | ../account-map/modules/iam-roles | n/a |
 | <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
 
