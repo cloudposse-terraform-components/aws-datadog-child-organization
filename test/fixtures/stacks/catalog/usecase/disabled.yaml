@@ -1,7 +1,10 @@
 components:
   terraform:
-    example/disabled:
+    datadog-child-organization/disabled:
       metadata:
-        component: target
+        component: datadog-child-organization
       vars:
         enabled: false
+        name: datadog-child-organization
+        organization_name: acme-child-organization
+
