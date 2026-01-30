@@ -15,5 +15,12 @@ spec:
         - "**/**"
       excluded_paths: []
 
-
+    - component: "datadog-configuration"
+      source: github.com/cloudposse-terraform-components/aws-datadog-credentials.git//src?ref={{.Version}}
+      version: v1.535.11
+      targets:
+        - "components/terraform/datadog-configuration"
+      included_paths:
+        - "**/**"
+      excluded_paths: []
 

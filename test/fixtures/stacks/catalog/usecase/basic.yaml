@@ -1,9 +1,9 @@
 components:
   terraform:
-    example/basic:
+    datadog-child-organization/basic:
       metadata:
-        component: target
+        component: datadog-child-organization
       vars:
         enabled: true
-        organization_name: test
-        region: us-east-2
+        name: datadog-child-organization
+        organization_name: acme-child-organization
