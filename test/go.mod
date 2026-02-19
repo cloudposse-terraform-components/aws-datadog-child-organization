@@ -7,7 +7,7 @@ toolchain go1.24.1
 require (
 	github.com/cloudposse/test-helpers v0.23.0
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
-	github.com/gruntwork-io/terratest v0.48.2 // indirect
+	github.com/gruntwork-io/terratest v0.48.2
 	github.com/mattn/go-zglob v0.0.6 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/stretchr/testify v1.10.0
@@ -18,7 +18,7 @@ require (
 
 require (
 	dario.cat/mergo v1.0.1 // indirect
-	filippo.io/edwards25519 v1.1.0 // indirect
+	filippo.io/edwards25519 v1.1.1 // indirect
 	github.com/agext/levenshtein v1.2.3 // indirect
 	github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
 	github.com/aws/aws-sdk-go-v2 v1.36.3 // indirect
